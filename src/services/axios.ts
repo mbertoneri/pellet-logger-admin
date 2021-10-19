@@ -85,7 +85,7 @@ axios.interceptors.response.use(
 
         return response;
     },
-    (error: AxiosError) => {
+    (error: AxiosError<any, any>) => {
         if (error.response) {
             if (400 === error.response.status || 422 === error.response.status) {
                 const message = error.response?.data?.['hydra:title'] ?? null;
@@ -166,6 +166,9 @@ const requestApi = <Entity = unknown>(options: RequestOptions): AxiosPromiseWith
         headers: { ...REQUEST_DEFAULT_HEADERS, ...options.headers },
         paramsSerializer: (params): string => qs.stringify(params),
     };
+    if (!options.headers) {
+        options.headers = {};
+    }
     if (options.secure && token && token.length > 0) {
         options.headers.Authorization = `Bearer ${token}`;
     }

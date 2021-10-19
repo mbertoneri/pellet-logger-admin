@@ -36,3 +36,8 @@ export type DownloadEvent<T> = {
     contentType: string;
     name: string;
 };
+
+export type Violation = {
+    propertyPath: string;
+    message: string;
+};
