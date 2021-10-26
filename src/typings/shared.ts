@@ -1,5 +1,8 @@
 import { AxiosPromise } from 'axios';
-import { Locales } from 'typings/enums';
+import { FC, LazyExoticComponent } from 'react';
+import { Locales, Roles } from 'typings/enums';
+import { ResourceListSelectors, ResourceSlice } from 'typings/state';
+import { ResourceApi } from './api';
 
 type Levels = 'success' | 'info' | 'warning' | 'error';
 
@@ -40,4 +43,40 @@ export type DownloadEvent<T> = {
 export type Violation = {
     propertyPath: string;
     message: string;
+};
+
+export type Route = {
+    exact: boolean;
+    path: string;
+    component: FC<any>;
+    roles?: Roles | Array<Roles>;
+};
+
+export type RouteWithLayout = Route & {
+    layout: FC<any>;
+};
+
+export type RouteCollection = Record<string, Route> & {
+    list?: Route;
+    add?: Route;
+    edit?: Route;
+    show?: Route;
+};
+
+export type ResourcePaths = Record<string, string> & {
+    LIST?: string;
+    EDIT?: string;
+    SHOW?: string;
+    ADD?: string;
+};
+
+export type Resource<TEntity extends Item, ApiType extends ResourceApi<TEntity> = ResourceApi<TEntity>> = {
+    name: string;
+    paths: ResourcePaths;
+    translationKey: string;
+    api: ApiType;
+    selectors: ResourceListSelectors;
+    actions: ResourceSlice;
+    routes?: RouteCollection;
+    component?: LazyExoticComponent<FC<any>>;
 };

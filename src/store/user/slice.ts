@@ -2,9 +2,9 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import Cookies from 'js-cookie';
 import { createResourceSlice, resourceInitialState } from 'store/ResourceSlice';
 import { UserApiItem } from 'typings/api';
-import { AuthState, ResourceSlice, UserState } from 'typings/state';
+import { AuthState, ResourceSlice, StateResource } from 'typings/state';
 
-const listInitialState: UserState = resourceInitialState();
+const listInitialState: StateResource = resourceInitialState();
 
 const authInitialState: AuthState = {
     connectedUser: null,
@@ -38,4 +38,4 @@ const slice = createResourceSlice({
 });
 
 export const user = slice.reducer;
-export const actions: ResourceSlice & typeof slice.actions = slice.actions;
+export const actions = slice.actions as ResourceSlice & typeof slice.actions;

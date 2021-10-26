@@ -1,6 +1,7 @@
 import { CaseReducer, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit';
 import { MUISortOptions } from 'mui-datatables';
 import { OutputSelector } from 'reselect';
+import { RootState } from 'store';
 import { ApiErrors, UserApiItem } from 'typings/api';
 import { OrNull } from 'typings/shared';
 
@@ -34,7 +35,7 @@ export type StateResource = {
 };
 
 export type AuthState = {
-    connectedUser: OrNull<User>;
+    connectedUser: OrNull<UserApiItem>;
 };
 
 export type LayoutState = {
@@ -47,4 +48,4 @@ export type RequestState = ApiErrors & {
     submitting: boolean;
 };
 
-export type UserState = StateResource<UserApiItem> & AuthState;
+export type UserState = StateResource & AuthState;
