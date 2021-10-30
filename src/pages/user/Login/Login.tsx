@@ -1,5 +1,5 @@
-import { Container, Typography } from '@material-ui/core';
-import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
+import { Container, Typography } from '@mui/material';
+import { LockOutlined as LockOutlinedIcon } from '@mui/icons-material';
 import LoginForm from 'components/Entities/User/LoginForm';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,15 +8,14 @@ import { AvatarIcon, Main } from './styled';
 
 const initialValues: LoginFormValues =
     process.env.NODE_ENV === 'production'
-        ? { username: '', password: '' }
+        ? { email: '', password: '' }
         : {
-              username: 'manager@dev.com',
-              password: 'Easy321$',
+              email: 'user@test.com',
+              password: 'P@ssw0rd',
           };
 
 export const Login: React.FC = () => {
     const { t } = useTranslation(['user']);
-    console.log('login!!');
     return (
         <>
             <Container component="main" maxWidth="xs">

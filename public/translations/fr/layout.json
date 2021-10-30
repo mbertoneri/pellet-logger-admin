@@ -1,0 +1,69 @@
+{
+  "drawer": {
+    "open": "Afficher le menu",
+    "items": {
+      "dashboard": "Dashboard",
+      "customer": "Clients",
+      "enquiry": "Demandes",
+      "bed": "Lits",
+      "location": "Quartiers",
+      "poi": "Points d'intérêts",
+      "rental": "Villas",
+      "room_type": "Types de pièces",
+      "furnishing": "Equipements",
+      "team": "Team",
+      "user": "Utilisateurs",
+      "booking": "Réservations",
+      "requestContact": "Demandes de contact",
+      "settings": {
+        "title": "Paramètres",
+        "nested": {
+          "user": "Utilisateurs",
+          "season": "Saisons",
+          "highlight": "Les plus",
+          "payment_mode": "Moyens de paiement",
+          "origin": "Sources",
+          "cancel_reason": "Raisons d'annulation",
+          "my_team": "Mon équipe"
+        }
+      },
+      "directory": {
+        "title": "Annuaire",
+        "nested": {
+          "owner": "Propriétaires",
+          "manager": "Managers",
+          "partner": "Partenaires",
+          "competitor": "Concurrents"
+        }
+      },
+      "accounting": {
+        "title": "Comptabilité",
+        "nested": {
+          "bank_data": "Journal de banque",
+          "sales_data": "Journal de ventes",
+          "commission_data": "Journal de commission"
+        }
+      }
+    }
+  },
+  "profile": {
+    "logout": "Déconnexion",
+    "connect_as": "Se connecter en tant que",
+    "logout_connect_as": "Quitter la supervision",
+    "my_account": "Mon compte"
+  },
+  "messages": {
+    "downloading": "Téléchargement en cours",
+    "url_copied": "Lien copié"
+  },
+  "appbar": {
+    "quickfind": {
+      "rentals": "Villas",
+      "bookings": "Réservations",
+      "customers": "Clients",
+      "no_result": "Aucun résultat",
+      "min_length": "Saisir au moins {{count}} caractères",
+      "see_other_results": "Voir les {{count}} résultats"
+    }
+  }
+}

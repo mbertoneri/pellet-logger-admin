@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "email": "Adresse email",
+    "password": "Mot de passe"
+  },
+  "buttons": {
+    "connect": "Se connecter",
+    "delete": "Supprimer",
+    "edit": "Éditer",
+    "archive": "Archiver",
+    "search": "Rechercher",
+    "merge": "Fusionner",
+    "cancel": "Annuler",
+    "apply": "Appliquer",
+    "save": "Enregistrer",
+    "download_pdf": "Télécharger le pdf"
+  }
+}

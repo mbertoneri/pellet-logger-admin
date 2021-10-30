@@ -25,6 +25,6 @@ export const routes: RouteCollection = {
         exact: true,
         path: paths.EDIT,
         component: UserEditPage,
-        roles: [Roles.MANAGER, Roles.SUPER_ADMIN],
+        roles: [Roles.BASE_USER],
     },
 };

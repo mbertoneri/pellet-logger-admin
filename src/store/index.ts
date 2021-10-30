@@ -5,6 +5,7 @@ import logger from 'redux-logger';
 import { FLUSH, PAUSE, PERSIST, persistReducer, PURGE, REGISTER, REHYDRATE } from 'redux-persist';
 import { user } from './user/slice';
 import { request } from './request/slice';
+import { layout } from './layout/slice';
 
 const serializableCheck = {
     serializableCheck: {
@@ -20,6 +21,7 @@ export const sharedResources = [];
 const reducers = {
     user,
     request,
+    layout,
 };
 
 const persistConfig = {

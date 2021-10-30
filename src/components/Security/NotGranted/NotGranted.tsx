@@ -1,5 +1,5 @@
-import { Button } from '@material-ui/core';
-import { Lock as AccessDeniedIcon } from '@material-ui/icons';
+import { Button } from '@mui/material';
+import { Lock as AccessDeniedIcon } from '@mui/icons-material';
 import { paths } from 'pages/routes';
 import React from 'react';
 import { useTranslation } from 'react-i18next';

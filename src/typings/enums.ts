@@ -4,15 +4,8 @@ export enum Locales {
 }
 
 export enum Roles {
-    MANAGER = 'ROLE_TEAM_MANAGER',
-    BASE_USER = 'ROLE_TEAM_USER',
-    ACCOUNTING = 'ROLE_ACCOUNTING',
-    BUTLER = 'ROLE_BUTLER',
-    TRADER = 'ROLE_TRADER',
-    WEBMASTER = 'ROLE_WEBMASTER',
+    BASE_USER = 'ROLE_USER',
     ADMIN = 'ROLE_ADMIN',
-    SUPER_ADMIN = 'ROLE_SUPER_ADMIN',
-    ALLOWED_TO_SWITCH = 'ROLE_ALLOWED_TO_SWITCH',
 }
 
 export enum Orders {

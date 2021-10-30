@@ -1,1 +1,1 @@
-export { LoginForm as default } from './LoginForm';
+export { Form as default } from 'components/Entities/User/LoginForm/LoginForm';

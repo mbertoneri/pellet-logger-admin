@@ -1,4 +1,4 @@
-import { styled, Typography } from '@material-ui/core';
+import { styled, Typography } from '@mui/material';
 
 export const Container = styled('main')({
     alignItems: 'center',

@@ -1,6 +1,6 @@
 import Axios, { AxiosError, AxiosPromise, AxiosRequestConfig } from 'axios';
 import qs from 'qs';
-import { getSwitchUser, getToken } from 'services/security';
+import { getToken } from 'services/security';
 import { store } from 'store';
 import { failure, init, success } from 'store/request/slice';
 import { actions } from 'store/user/slice';
@@ -157,7 +157,6 @@ const REQUEST_DEFAULT_OPTIONS: RequestOptions = {
 const requestApi = <Entity = unknown>(options: RequestOptions): AxiosPromiseWithCancel<Entity> => {
     const cancelToken = Axios.CancelToken.source();
     const token = getToken();
-    const switchUser = getSwitchUser();
     options = {
         ...REQUEST_DEFAULT_OPTIONS,
         ...options,
@@ -171,10 +170,6 @@ const requestApi = <Entity = unknown>(options: RequestOptions): AxiosPromiseWith
     }
     if (options.secure && token && token.length > 0) {
         options.headers.Authorization = `Bearer ${token}`;
-    }
-
-    if (switchUser) {
-        options.headers['_switch-user'] = switchUser;
     }
 
     if (typeof options.data === 'object') {

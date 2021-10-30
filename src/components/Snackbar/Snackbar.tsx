@@ -1,5 +1,5 @@
-import { Snackbar as MUISnackbar } from '@material-ui/core';
-import { Alert, Color } from '@material-ui/lab';
+import { AlertColor, Snackbar as MUISnackbar } from '@mui/material';
+import { Alert } from '@mui/lab';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Bus from 'services/bus';
@@ -8,7 +8,7 @@ import { Flash, OrNull } from 'typings/shared';
 export const Snackbar: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [message, setMessage] = useState<string>('');
-    const [type, setType] = useState<Color>('success');
+    const [type, setType] = useState<AlertColor>('success');
     const [translationNamespace, setTranslationNamespace] = useState<OrNull<string>>(null);
     const { t } = useTranslation(translationNamespace ?? '');
 

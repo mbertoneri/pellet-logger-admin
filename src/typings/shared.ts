@@ -80,3 +80,8 @@ export type Resource<TEntity extends Item, ApiType extends ResourceApi<TEntity> 
     routes?: RouteCollection;
     component?: LazyExoticComponent<FC<any>>;
 };
+
+export type ValidationError = {
+    message?: string;
+    values?: { [key: string]: any };
+};

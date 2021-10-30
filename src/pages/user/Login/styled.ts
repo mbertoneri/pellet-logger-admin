@@ -1,4 +1,4 @@
-import { Avatar, styled } from '@material-ui/core';
+import { Avatar, styled } from '@mui/material';
 
 export const Main = styled('div')(({ theme }) => ({
     alignItems: 'center',

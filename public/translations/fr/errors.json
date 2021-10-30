@@ -1,0 +1,19 @@
+{
+  "login": {
+    "wrong_credential": "Identifiants invalides",
+    "default_error": "Une erreur est survenue lors de la connexion. Veuillez réessayer"
+  },
+  "form": {
+    "submit_error": "Une erreur est survenue lors de l'enregistrement du formulaire. Veuillez vérifier les données et le re-soumettre."
+  },
+  "api": {
+    "fetch_list": "Une erreur est survenue lors de la récupération de la liste",
+    "global": "Une erreur est survenue lors de la communication avec le serveur. Veuillez réessayer"
+  },
+  "not_found": "Élément non trouvé",
+  "not_granted": {
+    "title": "Vous n'avez pas les droits nécessaires pour accéder à cette page",
+    "go_back": "Retourner à la page précédente"
+  },
+  "not_available": "Cette villa n‘est pas disponible pour cette période"
+}

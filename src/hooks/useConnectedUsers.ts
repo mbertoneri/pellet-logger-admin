@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useQuery, UseQueryResult } from 'react-query';
 import { useDispatch } from 'react-redux';
 import userAPI from 'resources/user/api';
-import { getLinkedRoles, getRolesFromToken, getSwitchUser, getToken, isRoleGranted } from 'services/security';
+import { getLinkedRoles, getRolesFromToken, getToken, isRoleGranted } from 'services/security';
 import { actions } from 'store/user/slice';
 import { UserApiItem } from 'typings/api';
 import { Roles } from 'typings/enums';
@@ -51,13 +51,12 @@ export const useConnect = (): {
 export const useFetchProfile = (): UseQueryResult<UserApiItem> => {
     const dispatch = useDispatch();
     const roles = getRolesFromToken();
-    const switchUser = getSwitchUser();
     const isGrantedAdmin = isRoleGranted(getLinkedRoles(roles), [Roles.ADMIN]);
     const token = getToken();
     return useQuery(
         ['profile', { token }],
         () =>
-            userAPI.getProfile(isGrantedAdmin && null === switchUser).then(({ data }) => {
+            userAPI.getProfile(isGrantedAdmin).then(({ data }) => {
                 dispatch(actions.connect(data));
                 return data;
             }),
