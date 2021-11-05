@@ -6,6 +6,8 @@ import { FLUSH, PAUSE, PERSIST, persistReducer, PURGE, REGISTER, REHYDRATE } fro
 import { user } from './user/slice';
 import { request } from './request/slice';
 import { layout } from './layout/slice';
+import { stove } from './stove/slice';
+import { stoveBrand } from './stoveBrand/slice';
 
 const serializableCheck = {
     serializableCheck: {
@@ -22,6 +24,8 @@ const reducers = {
     user,
     request,
     layout,
+    stove,
+    stoveBrand,
 };
 
 const persistConfig = {

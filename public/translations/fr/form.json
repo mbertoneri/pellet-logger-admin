@@ -1,7 +1,14 @@
 {
   "fields": {
     "email": "Adresse email",
-    "password": "Mot de passe"
+    "password": "Mot de passe",
+    "stove": {
+      "modal_add": {
+        "purchase_price": "Prix d'achat",
+        "stove_model": "Modèle",
+        "stove_brand": "Marque"
+      }
+    }
   },
   "buttons": {
     "connect": "Se connecter",

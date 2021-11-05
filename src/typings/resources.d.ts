@@ -9,3 +9,21 @@ export type UserResource = {
     roles: Array<Roles>;
     team?: string;
 };
+
+export type StoveBrandResource = {
+    title: string;
+};
+
+export type StoveResource = {
+    title: string;
+    stoveBrand: string;
+};
+
+export type UserStoveResource = {
+    purchasePrice: number;
+    stove: {
+        title: string;
+        stoveBrand: string;
+        '@id': string;
+    };
+};

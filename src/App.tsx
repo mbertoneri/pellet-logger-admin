@@ -125,7 +125,6 @@ const App: React.FC = () => {
                                 <Redirect to={paths.dashboard.DASHBOARD_INDEX} />
                             </Switch>
                         </Container>
-                        <div>bla</div>
                     </SCThemeProvider>
                 </ThemeProvider>
             </QueryClientProvider>

@@ -49,3 +49,5 @@ export type RequestState = ApiErrors & {
 };
 
 export type UserState = StateResource & AuthState;
+export type StoveState = StateResource;
+export type StoveBrandState = StateResource;

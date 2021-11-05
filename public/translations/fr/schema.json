@@ -1,0 +1,32 @@
+{
+  "email": {
+    "valid": "Veuillez saisir une adresse email valide"
+  },
+  "string": {
+    "max_length": "Ce champ ne peut contenir plus de {{max}} caractères"
+  },
+  "number": {
+    "greater_than_or_equals": "Doit être à supérieur ou égal à {{min}}",
+    "must_be_a_number": "Ce champ doit contenir un nombre"
+  },
+  "list": {
+    "at_least": "Veuillez choisir au moins {{min}} élément(s)"
+  },
+  "api": {
+    "this_customer_cannot_be_removed_because_it_has_bookings": "Ce client ne peut être supprimé car des contrats lui sont rattachés",
+    "an_error_occurred": "Une erreur est survenue",
+    "this_location_cannot_be_removed_because_it_has_associated_rentals": "Ce quartier ne peut être supprimé car des villas y sont rattachées",
+    "plainpassword_you_must_set_a_password": "Le mot de passe est requis",
+    "fill_all_translations": "Vous devez renseigner toutes les traductions",
+    "rental": {
+      "already_booked": "Il existe déjà une réservation à cette date"
+    }
+  },
+  "required": "Requis",
+  "oneOf": "Ce choix n'est pas valide",
+  "at_least_one_of": "Vous devez renseigner l'un des champs suivant: {{keys}}",
+  "min_booking": "La date d'arrivée ne correspond pas aux lignes de réservation",
+  "max_booking": "La date de départ ne correspond pas aux lignes de réservation",
+  "refund_amount": "Le montant saisi est invalide",
+  "invalid_mandate": "La date d'expiration du mandat sélectionné est invalide"
+}

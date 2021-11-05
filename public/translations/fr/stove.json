@@ -1,0 +1,9 @@
+{
+  "fab-actions": {
+    "add": "Ajouter un poêle"
+  },
+  "add": {
+    "title": "Nouveau poêle",
+    "success": "Poêle ajouté"
+  }
+}

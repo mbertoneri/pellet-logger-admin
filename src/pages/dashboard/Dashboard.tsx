@@ -1,3 +1,4 @@
+import BottomBar from 'components/Layout/BottomBar';
 import RootContainer from 'components/Layout/RootContainer';
 import Toolbar from 'components/Layout/Toolbar';
 import React from 'react';
@@ -9,15 +10,12 @@ export const Dashboard: React.FC = () => {
     const connectedUser = useSelector(userSelectors.selectConnectedUser);
     const { t } = useTranslation(['dashboard']);
 
+    console.log('dash', connectedUser);
+
     return (
         <RootContainer>
-            <Toolbar
-                title={t('dashboard:header.title')}
-                subtitle={t('dashboard:header.subtitle')}
-                withDrawer={true}
-                selectedElementInDrawer="dashboard"
-            />
-            {connectedUser && <>Dashboard</>}
+            {connectedUser && <>Dashboard hehe</>}
+            <BottomBar />
         </RootContainer>
     );
 };

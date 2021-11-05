@@ -65,5 +65,11 @@
       "min_length": "Saisir au moins {{count}} caractères",
       "see_other_results": "Voir les {{count}} résultats"
     }
+  },
+  "bottom_bar": {
+    "dashboard": "Dashboard",
+    "strove": "Poële",
+    "settings": "Paramètres",
+    "account": "Account"
   }
 }

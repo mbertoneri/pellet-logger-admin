@@ -1,5 +1,5 @@
 import { AxiosPromise } from 'axios';
-import { FC, LazyExoticComponent } from 'react';
+import React, { FC, LazyExoticComponent } from 'react';
 import { Locales, Roles } from 'typings/enums';
 import { ResourceListSelectors, ResourceSlice } from 'typings/state';
 import { ResourceApi } from './api';
@@ -84,4 +84,12 @@ export type Resource<TEntity extends Item, ApiType extends ResourceApi<TEntity> 
 export type ValidationError = {
     message?: string;
     values?: { [key: string]: any };
+};
+
+export type FabActionType = {
+    onClick: () => unknown;
+    key: string;
+    tooltip: string;
+    roles: Array<Roles>;
+    icon: React.ReactNode;
 };
