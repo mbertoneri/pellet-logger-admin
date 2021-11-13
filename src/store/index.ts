@@ -8,6 +8,8 @@ import { request } from './request/slice';
 import { layout } from './layout/slice';
 import { stove } from './stove/slice';
 import { stoveBrand } from './stoveBrand/slice';
+import { pelletBrand } from './pelletBrand/slice';
+import { supply } from './supply/slice';
 
 const serializableCheck = {
     serializableCheck: {
@@ -26,6 +28,8 @@ const reducers = {
     layout,
     stove,
     stoveBrand,
+    pelletBrand,
+    supply,
 };
 
 const persistConfig = {

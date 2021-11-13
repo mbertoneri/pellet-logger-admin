@@ -3,6 +3,7 @@ import { Button, Grid, LinearProgress } from '@mui/material';
 import { schema } from 'components/Entities/Stove/Form/validation';
 import DataSelect from 'components/Form/DataSelect';
 import EntitySelect from 'components/Form/EntitySelect';
+import LocalizedDatePicker from 'components/Form/LocalizedDatePicker';
 import SubmitError from 'components/Form/SubmitError';
 import TextField from 'components/Form/TextField';
 import useCustomForm from 'hooks/useCustomForm';
@@ -73,6 +74,14 @@ export const Form: React.FC<Props> = React.forwardRef(({ initialValues, onSubmit
                             label={t('form:fields:stove:modal_add.stove_model')}
                             withEmpty={true}
                             getLabel={(stove: StoveApiItem): string => stove.title}
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <LocalizedDatePicker
+                            name="purchasedAt"
+                            label={t('form:fields:stove:modal_add.purchased_at')}
+                            fullWidth
+                            defaultValue={initialValues.purchasedAt}
                         />
                     </Grid>
                     <Grid container item xs={12} alignContent="center" alignItems="center" justifyContent="center">

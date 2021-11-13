@@ -3,6 +3,7 @@ import DrawerContent from 'components/Display/ModalDrawer/DrawerContent';
 import ModalDrawer from 'components/Display/ModalDrawer/ModalDrawer';
 import Form from 'components/Entities/Stove/Form';
 import { invalidateAllPages, QueryType } from 'hooks/useCrudQueries';
+import { DateTime } from 'luxon';
 import React, { createRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQueryClient } from 'react-query';
@@ -44,6 +45,7 @@ export const ModalAdd: React.FC<Props> = ({ onClose, onSave }) => {
         purchasePrice: 0,
         stove: '',
         stoveBrand: '',
+        purchasedAt: DateTime.now().toJSON(),
     };
 
     const onSubmit = (data: StoveFormValues): void => {

@@ -11,6 +11,7 @@ type Props = SelectProps & {
     label: string;
     withEmpty: boolean;
     filterValues?: (_value: any) => boolean;
+    filtersApi?: Record<string, any>;
 };
 
 export const EntitySelect: React.FC<Props> = ({
@@ -20,11 +21,13 @@ export const EntitySelect: React.FC<Props> = ({
     name,
     withEmpty,
     filterValues,
+    filtersApi,
     ...selectProps
 }) => {
     const { isLoading, data } = useAllPagesQuery({
         apiKey: api.apiKey,
-        apiMethod: api.fetchPage,
+        apiMethod: (page, itemsPerPage, filters, options) => api.fetchPage(page, itemsPerPage, filters, options),
+        filters: filtersApi || {},
     });
 
     if (isLoading) {

@@ -6,7 +6,26 @@
       "modal_add": {
         "purchase_price": "Prix d'achat",
         "stove_model": "Modèle",
-        "stove_brand": "Marque"
+        "stove_brand": "Marque",
+        "purchased_at": "Date d'achat"
+      }
+    },
+    "supply": {
+      "modal_add": {
+        "pellet_brand": "Choix de la marque",
+        "delivered_quantity": "Quantité",
+        "unit_price": "Prix unitaire",
+        "delivery_price": "Montant livraison",
+        "bags": "Sac(s)",
+        "purchased_at": "Date d'achat"
+      }
+    },
+    "consumptions": {
+      "modal_add": {
+        "quantity": "Quantité",
+        "unit": "Sacs",
+        "comment": "Commentaire",
+        "supply": "Choix du stock"
       }
     }
   },
@@ -21,5 +40,12 @@
     "apply": "Appliquer",
     "save": "Enregistrer",
     "download_pdf": "Télécharger le pdf"
+  },
+  "date_picker": {
+    "ok": "OK",
+    "cancel": "Annuler",
+    "clear": "Effacer",
+    "today": "Auj.",
+    "period": "Période"
   }
 }

@@ -1,15 +1,15 @@
-import LuxonUtils from '@date-io/luxon';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { LocalizationProvider } from '@mui/lab';
+import DateAdapter from '@mui/lab/AdapterLuxon';
 import { FullPageLoader } from 'components/Layout/FullPageLoader/FullPageLoader';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store } from 'store';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -17,9 +17,9 @@ ReactDOM.render(
         <Provider store={store}>
             <PersistGate persistor={persistStore(store)}>
                 <BrowserRouter>
-                    <MuiPickersUtilsProvider utils={LuxonUtils} locale="fr">
+                    <LocalizationProvider dateAdapter={DateAdapter} locale="fr">
                         <App />
-                    </MuiPickersUtilsProvider>
+                    </LocalizationProvider>
                 </BrowserRouter>
             </PersistGate>
         </Provider>

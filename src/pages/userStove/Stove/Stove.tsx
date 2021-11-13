@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import stoveResource from 'resources/stove';
 import brandResource from 'resources/stoveBrand';
 import { userStoves } from 'resources/userStove/api';
+import { formatDate } from 'services/date';
 import { UserStoveApiItem } from 'typings/api';
 import { Roles } from 'typings/enums';
 import { FabActionType } from 'typings/shared';
@@ -69,7 +70,9 @@ export const Stove: React.FC = () => {
                                                 >
                                                     {getBrand(stove)}
                                                 </Typography>
-                                                {` ${stove.purchasePrice}`}
+                                                {` ${stove.purchasePrice} ${t('stove:purchased_at')} ${formatDate(
+                                                    stove.purchasedAt,
+                                                )}`}
                                             </React.Fragment>
                                         }
                                     />
@@ -83,7 +86,6 @@ export const Stove: React.FC = () => {
                 {!isLoading && addOpen && (
                     <ModalAdd
                         onSave={(): void => {
-                            console.log('save');
                             setAddOpen(false);
                         }}
                         onClose={(): void => setAddOpen(false)}

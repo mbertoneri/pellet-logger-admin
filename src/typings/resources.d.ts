@@ -26,4 +26,24 @@ export type UserStoveResource = {
         stoveBrand: string;
         '@id': string;
     };
+    purchasedAt: string;
+};
+
+export type PelletBrandResource = {
+    title: string;
+};
+
+export type SupplyResource = {
+    deliveredQuantity: number;
+    quantity: number;
+    unitPrice: number;
+    deliveryPrice: number;
+    pelletBrand: string;
+    purchasedAt: string;
+};
+
+export type Consumption = {
+    quantity: number;
+    comment: Optional<string>;
+    supply: string;
 };

@@ -1,5 +1,4 @@
-import { Grid } from '@mui/material';
-import { Alert } from '@mui/lab';
+import { Grid, Alert } from '@mui/material';
 import React, { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';

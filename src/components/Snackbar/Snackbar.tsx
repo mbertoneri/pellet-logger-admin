@@ -1,5 +1,5 @@
 import { AlertColor, Snackbar as MUISnackbar } from '@mui/material';
-import { Alert } from '@mui/lab';
+import { Alert } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Bus from 'services/bus';

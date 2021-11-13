@@ -17,7 +17,3 @@ export const userStoves = (
         params: queryParameters,
     });
 };
-
-// export default {
-//     userStoves,
-// };

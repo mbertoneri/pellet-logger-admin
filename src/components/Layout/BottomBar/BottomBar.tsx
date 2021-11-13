@@ -4,16 +4,14 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { BottomNavigation, BottomNavigationAction, Box, Paper } from '@mui/material';
 import { AccountMenu } from 'components/Layout/AppBar/AccountMenu';
 import { paths } from 'pages/routes';
-import Stove from 'pages/userStove/Stove';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Route, useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export const BottomBar: React.FC = () => {
-    const [value, setValue] = React.useState(0);
     const { t } = useTranslation('layout');
     const history = useHistory();
+    const [value, setValue] = React.useState(history.location.pathname);
 
     //Link component:https://stackoverflow.com/questions/64351827/material-ui-bottomnavigation-does-not-fill-the-width
     //ou

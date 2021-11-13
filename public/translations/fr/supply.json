@@ -1,0 +1,23 @@
+{
+  "fab_actions": {
+    "supply": "Nouveau stock",
+    "consumption": "Nouvelle consommation"
+  },
+  "add": {
+    "title": "Ajout d'un nouveau stock",
+    "submit_success": "Stock ajouté",
+    "consumption": {
+      "title": "Nouvelle consommation",
+      "success": "Consommation ajoutée"
+    }
+  },
+  "widget": {
+    "title": "Stock",
+    "bag": "{{count}} sac",
+    "bag_plural": "{{count}} sacs",
+    "bag_other": "{{count}} sacs",
+    "used": "Stock utilisé",
+    "rest": "Stock restant",
+    "purchased_at": "Acheté le"
+  }
+}

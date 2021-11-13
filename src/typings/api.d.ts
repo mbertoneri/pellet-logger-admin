@@ -1,5 +1,13 @@
 import { AxiosPromise, AxiosRequestConfig } from 'axios';
-import { StoveBrandResource, StoveResource, UserResource, UserStoveResource } from 'typings/resources';
+import {
+    Consumption,
+    PelletBrandResource,
+    StoveBrandResource,
+    StoveResource,
+    SupplyResource,
+    UserResource,
+    UserStoveResource,
+} from 'typings/resources';
 
 import { Item, OrNull, Violation } from './shared';
 
@@ -60,3 +68,6 @@ export type UserApiItem = ItemJsonLD & UserResource;
 export type StoveBrandApiItem = ItemJsonLD & StoveBrandResource;
 export type StoveApiItem = ItemJsonLD & StoveResource;
 export type UserStoveApiItem = ItemJsonLD & UserStoveResource;
+export type PelletBrandApiItem = ItemJsonLD & PelletBrandResource;
+export type SupplyApiItem = ItemJsonLD & SupplyResource;
+export type ConsumptionApiItem = ItemJsonLD & Consumption;

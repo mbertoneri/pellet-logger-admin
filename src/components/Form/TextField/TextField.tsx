@@ -4,8 +4,9 @@ import _ from 'lodash';
 import React from 'react';
 import { useController, useFormContext } from 'react-hook-form';
 
-type Props = TextFieldProps & {
+type Props = Omit<TextFieldProps, 'variant'> & {
     name: string;
+    variant?: TextFieldProps['variant'];
 };
 export const TextField: React.FC<Props> = React.memo(
     ({ name, defaultValue, ...textFieldProps }) => {
@@ -32,6 +33,7 @@ export const TextField: React.FC<Props> = React.memo(
                 error={Boolean(error)}
                 inputRef={ref}
                 helperText={<ValidationErrorMessage error={error?.message} />}
+                variant="standard"
             />
         );
     },
